@@ -1,0 +1,138 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 900;
+}
+
+/* Make font size large and add a gradient */
+h1 {
+  font-size: 70px;
+  background: -webkit-linear-gradient(#52befd, #2590cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: ;
+  margin-bottom: 50px;
+}
+
+.expnet-logo {
+  width: 220px;
+}
+
+/* Style the form */
+#regForm {
+  background-color: #ffffff;
+  margin: 20px 0px;
+  padding: 20px 100px;
+  width: 100%;
+  min-width: 300px;
+  border: 10px solid #0e74b8;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50;
+}
+
+.previousButton {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0px;
+}
+
+.nextButton {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+
+/* Style form Previous and Next buttons */
+#nextBtn{
+  width: 130px;
+  height: 160px;
+
+  position: absolute;
+
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+
+  font-size: 0;
+}
+
+#prevBtn{
+  width: 130px;
+  height: 160px;
+
+position: absolute;
+
+
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+
+  font-size: 0;
+}
+
+/* Style form Previous and Next triangle button images */
+#nextImg,
+#prevImg {
+  width: 120px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express Network</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class='row justify-content-md-center'>
+      <div class="col col-lg-2 previousButton justify-content-end">
+        <img id="prevImg" onclick="nextPrev(-1)" src="http://expressnetworkas.com/wp-content/uploads/2019/09/back-triangle-button-v2.png">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      </div>
+
+      <div class="col-md-auto form">
+        <form id="regForm" action="">
+          <h1 class="main-title">Express eFiling</h1>
+          <!-- One "tab" for each step in the form: -->
+
+          <!-- 1st Page -->
+          <div class="tab">
+            <h2 class="step-header">Step One</h2>
+            <h4 class="text-center">Browse for documents to eFile</h4>
+            <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="50000000">
+            <input type="file" name="fileToUpload[]" multiple="multiple" id="fileToUpload" />
+            <p>Browse for files, then click Next.</p>
+          </div>
+
+          <!-- 2nd Page -->
+          <div class="tab">
+            <h2 class="step-header">Step Two</h2>
+            <h4>Type your reference number</h4>
+            <input placeholder="Billing Reference Number" oninput="this.className = ''" id="bill_ref" name="bill_ref" value="">
+            
+            <h4>File By:</h4>
+            <label class=""><input class="" type="radio" name="optradio" checked>Today</label>
+            <label class=""><input type="radio" name="optradio">Tomorrow</label>
+
+            <h4>Deliver Courtesy Copies:</h4>
+            <label class="radio-inline radio-label"><input type="radio" name="optradio" checked>Today</label>
+            <label class="radio-inline radio-label"><input type="radio" name="optradio">Tomorrow</label>
+
+            <h4>Serv Documents:</h4>
+            <label class="radio-inline radio-label"><input type="radio" name="optradio" checked>Today</label>
+            <label class="radio-inline radio-label"><input type="radio" name="optradio">Tomorrow</label>
+
+            <h4>Special Instructions (If Any)</h4>
+            <textarea rows="5" placeholder="" oninput="this.className = ''" id="spec_in" name="spec_in"></textarea>
+          </div>
+
+          <!-- 3rd Page -->
+          <div class="tab">
+            <h2>Please Review Your Order Details</h2>
+
+            <h4>Attached Files:</h4>
+            <div id='recap_attachments'></div>
+
+            <h4>Billing Reference:</h4>
+            <div id='recap_billref'></div>
+
+            <h4>Special Instructions:</h4>
+            <div id='recap_specin'></div>
+
+            <h4>File By:</h4>
+            <div style='color:blue;' id='recap_fileby'></div>
+          </div>
+
+          <!-- 4th Page -->
+          <div class="tab">
+            <h2>Order Placed Successfully</h2>
+            <p>Thank you for placing this iOrder</p>
+            <p>You QC# is: I0038505</p>
+          </div>
+
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+         <div class="text-center">
+          <img class="expnet-logo" src="http://expressnetworkas.com/wp-content/uploads/2019/09/express-network-form-logo.png">
+          </div>
+      </div>
+
+      <div class="col col-lg-2 nextButton">
+        <img id="nextImg" src="http://expressnetworkas.com/wp-content/uploads/2019/09/next-triangle-button-v2.png">
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+
+    <script src="javascript/javascript.js"></script>
+  </body>
+</html>
